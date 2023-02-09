@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("../assets/f0ac23162506135.63d742a08477c.png");
+  background-size: cover;
+  height: 3000px;
+}
