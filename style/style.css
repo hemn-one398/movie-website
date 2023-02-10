@@ -3,12 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  height: 100%;
-}
-body {
-  height: 100%;
-}
+
 /* video background */
 #backgroundVideo {
   position: fixed;
@@ -19,6 +14,7 @@ body {
 }
 
 main {
+  background-color: aqua;
   display: grid;
   grid-template-columns: 20% 80%;
   position: fixed;
@@ -48,6 +44,7 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
 }
+
 .side-nav ol ul a {
   align-items: center;
   width: 100%;
@@ -55,7 +52,7 @@ main {
   text-decoration: none;
   display: flex;
 
-  padding-left: 25%;
+  padding-left: 4vw;
   color: white;
   font-size: 20;
   font-weight: bold;
@@ -89,7 +86,7 @@ main {
   margin-left: 25%;
 
   border-bottom: 1px white solid;
-  font-size: 30px;
+  font-size: 2vw;
   color: white;
 }
 .side-nav h3 span {
@@ -109,10 +106,13 @@ header {
 /* search field in header */
 header .search-field {
   top: 20%;
-  padding: 5px 10px;
+  padding: 5px 15px;
   width: 40%;
   height: 35px;
-  display: block;
+  display: grid;
+  grid-template-columns: 96% 4%;
+  align-items: center;
+  justify-content: center;
   border-radius: 30px;
 
   background: rgba(255, 255, 255, 0.1);
@@ -128,9 +128,9 @@ header .search-field img {
 header .search-field input {
   background-color: transparent;
   color: white;
-  width: 95%;
+
   height: 25px;
-  padding-left: 10px;
+  padding: 0 10px;
   border: none;
   border-radius: inherit;
 }
@@ -145,11 +145,12 @@ header .notify-user {
   width: 25%;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
 }
 
 header .notify-user .user {
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -158,7 +159,7 @@ header .notify-user .user {
 header .notify-user .user span {
   margin-right: 10px;
   text-align: center;
-  font-size: 17px;
+  font-size: 1.3vw;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -180,7 +181,9 @@ header .bt-icon img {
   width: 18px;
   height: 18px;
 }
-
+#menubt {
+  display: none;
+}
 .movies {
   margin-top: 20px;
   display: grid;
@@ -258,6 +261,7 @@ header .bt-icon img {
   border-radius: 30px;
 }
 .movies .sugestted-movies span {
+  z-index: 1;
   text-shadow: whitesmoke 1px 0 2px;
   position: absolute;
   bottom: 0;
@@ -289,4 +293,73 @@ header .bt-icon img {
   top: 15px;
   right: 15px;
   height: 20px;
+}
+
+@media (max-width: 900px) {
+  .side-nav {
+    display: none;
+  }
+  main {
+    grid-template-columns: 100%;
+  }
+  main .container {
+    padding: 10px 15px 20px 20px;
+  }
+  #menubt {
+    display: flex;
+  }
+  header .notify-user .user span {
+    display: none;
+  }
+  header .notify-user {
+    justify-content: center;
+  }
+  header .notify-user .user {
+    margin-left: 5px;
+  }
+
+  .top-movie .title {
+    font-size: 35px;
+
+    top: 73%;
+  }
+  .top-movie .genere {
+    font-size: 12px;
+
+    top: 84%;
+  }
+
+  .sugestted-movies .title {
+    font-size: 18px;
+
+    top: 74%;
+  }
+  .sugestted-movies .genere {
+    font-size: 10px;
+
+    top: 85%;
+  }
+}
+
+@media (max-width: 600px) {
+  .movies {
+    margin-top: 20px;
+    display: grid;
+    width: 100%;
+    height: 600px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 20px;
+  }
+
+  .movies .top-movie {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 320px;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
 }
