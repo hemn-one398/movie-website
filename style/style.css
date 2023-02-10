@@ -14,7 +14,6 @@
 }
 
 main {
-  background-color: aqua;
   display: grid;
   grid-template-columns: 20% 80%;
   position: fixed;
@@ -193,6 +192,7 @@ header .bt-icon img {
   grid-row: repeat(2, 1fr);
   column-gap: 30px;
   row-gap: 20px;
+  text-transform: capitalize;
 }
 
 .movies .top-movie {
