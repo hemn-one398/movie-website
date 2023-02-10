@@ -5,13 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie</title>
+
     <link rel="stylesheet" href="style/style.css" />
-    <script src="/javas-sript/main.js" defer></script>
+    <script src="/java-script/main.js" defer></script>
   </head>
   <body>
-    <video autoplay muted loop id="myVideo">
-      <source src="rain.mp4" type="video/mp4" />
+    <video autoplay muted loop id="backgroundVideo">
+      <track kind="captions" default />
+      <source src="assets/media/background.mp4" type="video/mp4" />
       Your browser does not support HTML5 video.
     </video>
+
+    <main>
+      <nav class="side-nav">
+        <h3>
+          MOVIE
+          <span>ON</span>
+        </h3>
+        <ol>
+          <ul>
+            <a href="#">
+              <img alt="" src="assets/icons/home.svg" />
+              Home</a
+            >
+          </ul>
+          <ul>
+            <a href="#"> <img alt="" src="assets/icons/movie.svg" />Movie</a>
+          </ul>
+          <ul>
+            <a href="#">
+              <img alt="" src="assets/icons/favorite-filled.svg" />
+              Favourite</a
+            >
+          </ul>
+          <ul>
+            <a href="#"> <img alt="" src="assets/icons/about.svg" />About</a>
+          </ul>
+          <ul>
+            <a href="#">
+              <img alt="" src="assets/icons/history.svg" />History</a
+            >
+          </ul>
+        </ol>
+      </nav>
+      <div class="container">
+        <header>
+          <div class="search-field">
+            <input type="text" placeholder="search" />
+            <img src="assets/icons/search.svg" alt="" />
+          </div>
+          <div class="notify-user">
+            <div class="notify">
+              <div class="bt-icon">
+                <img src="assets/icons/notification.svg" alt="" />
+              </div>
+            </div>
+            <div class="user">
+              <span>Hemn Abdulrahamn</span>
+              <div class="bt-icon">
+                <img src="assets/icons/user.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </header>
+        <section class="movies" id="movies">
+          <article class="top-movie">
+            <figure>
+              <img src="assets/images/the bfg.jpg" alt="" />
+            </figure>
+            <span class="title">THE BFG</span>
+            <span class="genere">ADVANTURE</span>
+          </article>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
