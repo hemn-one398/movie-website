@@ -8,15 +8,15 @@ class Movie {
 }
 
 let recommendedMovies = [
-  new Movie("Aladin", "../assets/images/aladin.jpg", "Adventure", true),
-  new Movie("Moonfall", "../assets/images/Moonfall.jpg", "Adventure", true),
-  new Movie("onward", "../assets/images/onward.jpg", "Adventure", false),
-  new Movie("moonlight", "../assets/images/moonlight.jpg", "Adventure", true),
+  new Movie("Aladin", "assets/images/aladin.jpg", "Adventure", true),
+  new Movie("Moonfall", "assets/images/Moonfall.jpg", "Adventure", true),
+  new Movie("onward", "assets/images/onward.jpg", "Adventure", false),
+  new Movie("moonlight", "assets/images/moonlight.jpg", "Adventure", true),
 ];
 
 let topMovie = new Movie(
   "The BFG",
-  "../assets/images/the bfg.jpg",
+  "assets/images/the bfg.jpg",
   "Adventure",
   false
 );
