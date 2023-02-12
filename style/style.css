@@ -229,7 +229,7 @@ header .bt-icon img {
   font-weight: bold;
   top: 62%;
 }
-.top-movie .genere {
+.top-movie .genre {
   color: white;
   font-size: 22px;
   font-weight: bold;
@@ -280,7 +280,7 @@ header .bt-icon img {
   font-weight: bold;
   top: 74%;
 }
-.sugestted-movies .genere {
+.sugestted-movies .genre {
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -323,7 +323,7 @@ header .bt-icon img {
 
     top: 73%;
   }
-  .top-movie .genere {
+  .top-movie .genre {
     font-size: 12px;
 
     top: 84%;
@@ -334,7 +334,7 @@ header .bt-icon img {
 
     top: 74%;
   }
-  .sugestted-movies .genere {
+  .sugestted-movies .genre {
     font-size: 10px;
 
     top: 85%;

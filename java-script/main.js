@@ -1,8 +1,8 @@
 class Movie {
-  constructor(name, image, genere, isFavourite) {
+  constructor(name, image, genre, isFavourite) {
     this.name = name;
     this.image = image;
-    this.genere = genere;
+    this.genre = genre;
     this.isFavourite = isFavourite;
   }
 }
@@ -29,18 +29,18 @@ moviesSection.innerHTML = `<article class="top-movie">
               <img src="${topMovie.image}" alt="" />
             </figure>
             <span class="title">${topMovie.name}</span>
-            <span class="genere">${topMovie.genere}</span>
+            <span class="genre">${topMovie.genre}</span>
           </article>`;
 
-function add(name, image, genere, isFavourite) {
+function add(name, image, genre, isFavourite) {
   moviesSection.innerHTML += `<article class="sugestted-movies"> <img class="fav-icon" alt="" src="${
     isFavourite ? filledIcon : unfilledIcon
-  }" />  <figure>   <img src="${image}" alt="" /> </figure> <span class="title">${name}</span>   <span class="genere">${genere}</span> </article>`;
+  }" />  <figure>   <img src="${image}" alt="" /> </figure> <span class="title">${name}</span>   <span class="genre">${genre}</span> </article>`;
 }
 
 function generateRecommendedMovies() {
   for (const movie of recommendedMovies) {
-    add(movie.name, movie.image, movie.genere, movie.isFavourite);
+    add(movie.name, movie.image, movie.genre, movie.isFavourite);
   }
 }
 generateRecommendedMovies();
